@@ -13,14 +13,15 @@ module.exports = {
                     // If you are using rspack, the rspack's buiilt-in react transformation is sufficient.
                     // { loader: 'swc-loader' },
                     //
-                    { loader: 'ts-loader' },
                     // Now add reactCompilerLoader
                     {
                         loader: reactCompilerLoader,
                         options: defineReactCompilerLoaderOption({
                             // React Compiler options goes here
                         })
-                    }
+                    },
+
+                    { loader: 'ts-loader' },
                 ]
             }
         ],
