@@ -6,6 +6,8 @@ const App = () => {
     let fretWidth = 80
     let fretHeight = 30
 
+    let notes = ['C', 'D', 'E', 'F', 'G', 'A', 'B']
+
     let frets = []
     for (let i = 0; i < 6; i++) {
         for (let j = 0; j < 12; j++) {
