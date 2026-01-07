@@ -7,15 +7,15 @@ const App = () => {
     let fretHeight = 30
 
     let notes = ['C', '', 'D', '', 'E', 'F', '', 'G', '', 'A', '', 'B']
-    let startNote = [4, 11, 7, 2, 9, 4]
+    let stringNote = [4, 11, 7, 2, 9, 4]
 
     let frets = []
     for (let i = 0; i < 6; i++) {
-        for (let j = 0; j < 12; j++) {
-            let start = startNote[i];
+        for (let j = 0; j < 15; j++) {
+            let start = stringNote[i] + 1;
             let note = notes[start+j]
             if (note == null) {
-                note = notes[start+j-12]
+                note = notes[(start+j)%12]
             }
             frets.push(createFret(fretWidth, fretHeight, fretWidth*j, fretHeight*i, note === '' ? null : note))
         }
